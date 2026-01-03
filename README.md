@@ -1,0 +1,2 @@
+# ClassVote
+smart contract

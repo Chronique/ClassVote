@@ -1,49 +1,58 @@
 # 🗳️ ClassVote & SMP21 On-Chain Voting
 
-Repository ini berisi kumpulan Smart Contract dan antarmuka aplikasi voting desentralisasi yang dibangun di atas jaringan **Base**. Proyek ini dirancang untuk memfasilitasi pemilihan transparan, adil, dan efisien di lingkungan sekolah, seperti pemilihan Ketua Kelas atau Ketua OSIS.
+A decentralized, transparent, and user-friendly voting ecosystem built on the Base network. This project is designed to digitize school elections (such as Class President or Student Council) using blockchain technology to ensure every vote is tamper-proof and verifiable.
 
-## 🚀 Fitur Utama
+🚀 Key Features
+Gasless Transactions: Powered by Base Paymaster, allowing students to vote without holding any ETH. The school sponsors the gas fees for a seamless user experience.
 
-- **Gasless Transactions**: Menggunakan **Base Paymaster** sehingga pemilih (murid) tidak perlu memiliki saldo ETH untuk memberikan suara. Biaya gas ditanggung oleh sekolah.
-- **Dynamic Poll Title**: Judul pemilihan (misal: "Ketua Kelas" atau "Ketua OSIS") dapat diubah secara dinamis oleh Admin tanpa deploy ulang kontrak.
-- **Multiple Admin Support**: Mendukung banyak akun Admin (Guru, Kepsek, Panitia) yang didaftarkan langsung melalui *constructor* atau fungsi tambahan.
-- **Recyclable Sessions (Poll ID)**: Sistem menggunakan ID Sesi unik, memungkinkan satu kontrak digunakan berkali-kali untuk berbagai jenis pemilihan tanpa menghapus daftar murid (*whitelist*).
-- **Transparent & Immutable**: Semua hasil suara tercatat permanen di blockchain Base, mencegah manipulasi data.
-- **Base Builder Integrated**: Mendukung ekosistem Base dengan menyertakan *Builder Code* pada setiap transaksi.
+Dynamic Poll Titles: Admins can update the election title (e.g., from "Class Election" to "Student Council Election") directly through the UI without redeploying the contract.
 
-## 📜 Smart Contracts
+Multiple Admin Support: Securely manage multiple admin accounts (Teachers, Principals, or Committee members) registered directly on the blockchain.
 
-Terdapat dua kontrak utama dalam repository ini:
+Sessional Voting (Poll ID): Supports multiple election cycles using a unique pollID. This allows the same contract to be reused for different elections without losing the student whitelist.
 
-1.  **`contracts/ClassVote.sol`**: Versi awal untuk pemungutan suara sederhana.
-2.  **`contracts/SMP21Voting.sol`**: Versi terbaru yang dioptimalkan untuk SMP 21 dengan fitur Admin tambahan, judul dinamis, dan manajemen sesi pemilihan.
+Transparent & Immutable: All results are recorded permanently on the Base ledger, preventing any data manipulation.
 
-## 🛠️ Teknologi yang Digunakan
+Base Builder Integrated: Proudly contributing to the Base ecosystem with integrated Builder Codes on every transaction.
 
-- **Solidity**: Bahasa pemrograman untuk Smart Contract.
-- **Base Network**: Jaringan Layer 2 Ethereum yang cepat dan murah.
-- **Wagmi & Viem**: Library untuk interaksi blockchain di sisi frontend.
-- **React & Next.js**: Framework untuk antarmuka pengguna (UI).
-- **Framer Motion**: Untuk animasi UI yang halus dan modern.
-- **Material Design 3 (M3)**: Standar desain ikon dan komponen.
+📜 Smart Contracts
+This repository contains the following contracts:
 
-## ⚙️ Cara Penggunaan
+contracts/ClassVote.sol: The initial version for basic on-chain voting.
 
-### Tambah Kandidat
-Admin dapat memasukkan nama dan URL foto kandidat (mendukung link Google Drive yang sudah dikonversi menjadi *direct link*).
+contracts/SMP21Voting.sol: The advanced version optimized for school environments with multi-admin support, dynamic titles, and session management.
 
-### Manajemen Murid
-Alamat dompet murid dimasukkan ke dalam *whitelist* agar memiliki hak suara. Daftar ini tetap tersimpan meskipun sesi pemilihan di-reset.
+🛠️ Tech Stack
+Smart Contracts: Solidity
 
-### Reset Pemilihan
-Admin memiliki dua opsi reset:
-- **Reset Polling**: Menghapus hasil suara dan kandidat untuk memulai sesi baru, namun **menyimpan** daftar murid.
-- **Reset Total**: Menghapus seluruh data termasuk daftar murid.
+Network: Base (Layer 2)
 
-## 🏗️ Developer Info
+Blockchain Hooks: Wagmi & Viem
 
-Proyek ini mendukung ekosistem Base.
-- **Builder Code**: `bc_vghq983e`
+Frontend: React & Next.js
 
----
-Dibuat dengan ❤️ untuk kemajuan digitalisasi pendidikan di **SMP Negeri 21 Kota Jambi**.
+Animations: Framer Motion (for smooth, cinematic UI transitions)
+
+Design System: Material Design 3 (M3)
+
+⚙️ How It Works
+Admin Dashboard
+Setup Candidates: Add candidate names and photo URLs (Supports direct links from Google Drive).
+
+Student Whitelisting: Register student wallet addresses to grant them voting rights. The whitelist persists across different election sessions.
+
+Title Management: Change the election header dynamically via the Admin Settings tab.
+
+Voting Process
+Confirmation: A built-in confirmation prompt ensures voters are certain of their choice before submitting.
+
+One Vote Per Session: Students can only vote once per pollID, mirroring real-world election integrity.
+
+🏗️ Developer Info
+This project is part of the Base Builder community.
+
+Builder Code: bc_vghq983e
+
+Built with ❤️ for the digital transformation of SMP Negeri 21 Jambi.
+
+Verified on BaseScan: https://basescan.org/address/0x91B76ee72F7739a429ab59Db2D43C104dA16E5b6#code

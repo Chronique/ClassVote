@@ -1,7 +1,7 @@
 # 🗳️ ClassVote & SMP21 On-Chain Voting
 
 
-![Screenshot Aplikasi](./assets/Screenshot 2026-01-06 000512.png)
+![Application Screenshot](./assets/Screenshot%202026-01-06%20000512.png)
 
 A decentralized, transparent, and user-friendly voting ecosystem built on the Base network. This project is designed to digitize school elections (such as Class President or Student Council) using blockchain technology to ensure every vote is tamper-proof and verifiable.
 

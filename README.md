@@ -55,4 +55,4 @@ Builder Code: bc_vghq983e
 
 Built with ❤️ for the digital transformation of SMP Negeri 21 Jambi.
 
-Verified on BaseScan: https://basescan.org/address/0x91B76ee72F7739a429ab59Db2D43C104dA16E5b6#code
+Verified on BaseScan: [0x91B76ee72F7739a429ab59Db2D43C104dA16E5b6] (https://basescan.org/address/0x91B76ee72F7739a429ab59Db2D43C104dA16E5b6#code)

@@ -1,4 +1,8 @@
-📜 Smart Contracts
+# 📜 Smart Contracts
+
+
+
+
 This repository contains the following contracts:
 contracts/ClassVote.sol: The initial version for basic on-chain voting.
 contracts/SMP21Voting.sol: The advanced version optimized for school environments with multi-admin support, dynamic titles, and session management.
